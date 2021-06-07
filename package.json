@@ -1,0 +1,19 @@
+{
+    "name": "roon-ayrelink",
+    "version": "1.0.0",
+    "description": "Roon Extension for volume control over AyreLink",
+    "main": "ayrelink-extension.js",
+    "author": "Neil V. Patel",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "ayrelink": "github:synapse-md/ayrelink",
+        "node-roon-api": "github:roonlabs/node-roon-api",
+        "node-roon-api-settings": "github:roonlabs/node-roon-api-settings",
+        "node-roon-api-status": "github:roonlabs/node-roon-api-status",
+        "node-roon-api-volume-control": "github:roonlabs/node-roon-api-volume-control"
+    },
+    "repository": "github:synapse-md/roon-ayrelink",
+    "engines": {
+        "node": "^14.17.0"
+    }
+}
