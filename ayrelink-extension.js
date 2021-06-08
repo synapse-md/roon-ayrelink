@@ -9,7 +9,7 @@ const AyreLink             = require("ayrelink"),
 
 let roon = new RoonApi({
     extension_id:       'com.synapse-md.roon.ayrelink',
-    display_name:       "AyreLink Volume Control Extension",
+    display_name:       "AyreLink Extension",
     display_version:    "1.0.0",
     publisher:          "synapse-md",
     email:              'nvpatel@mailnx.net'
