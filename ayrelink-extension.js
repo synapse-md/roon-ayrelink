@@ -133,7 +133,7 @@ function updatestatus() {
         if ((ayrelink.control.updatetype == "status") && (ayrelink.source_control)) {
             if (ayrelink.control.status.preampstatus == "MUTE") ayrelink.source_control.update_state({ standby: "deselected" });
             if (ayrelink.control.status.preampstatus == "ON") ayrelink.source_control.update_state({ standby: "deselected" });
-            if (ayrelink.control.status.preampstatus == "OFF") ayrelink.source_control.update_state({ standby: "selected" });
+            if (ayrelink.control.status.preampstatus == "STANDBY") ayrelink.source_control.update_state({ standby: "selected" });
         }
         ayrelink.control.updatetype = undefined;
     } else if (!mysettings.serialport) {
@@ -193,8 +193,6 @@ function ev_connected() {
             control.set_volume("K",volume.body.value);
         },
         set_mute: function (mute) {
-            console.log("mute request");
-            console.log(mute.body);
             if (mute.body.mode == "on") {
                 control.set_state("K","M");
             } else if ((mute.body.mode == "off") && (control.status.preampstatus != "STANDBY")) {
@@ -202,5 +200,4 @@ function ev_connected() {
             }
         }
         });
-        console.log("[CONNECTED EVENT]");
 }
